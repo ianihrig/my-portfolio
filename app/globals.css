@@ -1,0 +1,114 @@
+@import "mapbox-gl/dist/mapbox-gl.css";
+@import "tailwindcss";
+
+/* Blueprint theme tokens */
+:root {
+  --bp-bg: #071428;         /* deep blueprint navy */
+  --bp-grid: rgba(255,255,255,0.10);
+  --bp-grid-soft: rgba(255,255,255,0.06);
+  --bp-ink: rgba(255,255,255,0.92);
+  --bp-ink-muted: rgba(255,255,255,0.70);
+  --bp-glass: rgba(255,255,255,0.06); /* frosted glass */
+  --bp-glass-border: rgba(255,255,255,0.16);
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--bp-bg);
+  color: var(--bp-ink);
+}
+
+/* Subtle “blueprint paper” noise */
+.bp-noise {
+  background-image:
+    radial-gradient(rgba(255,255,255,0.03) 1px, transparent 0);
+  background-size: 18px 18px;
+  opacity: 0.30;
+  mix-blend-mode: overlay;
+}
+
+/* Blueprint grid utility */
+.bp-grid {
+  background-image:
+    linear-gradient(to right, var(--bp-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--bp-grid) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Secondary finer grid (optional layering) */
+.bp-grid-fine {
+  background-image:
+    linear-gradient(to right, var(--bp-grid-soft) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--bp-grid-soft) 1px, transparent 1px);
+  background-size: 14px 14px;
+  opacity: 0.7;
+}
+
+/* Frosted glass panel */
+.bp-glass {
+  background: var(--bp-glass);
+  border: 1px solid var(--bp-glass-border);
+  backdrop-filter: blur(10px);
+}
+
+/* Text helpers */
+.bp-muted {
+  color: var(--bp-ink-muted);
+}
+
+/* Scrollbar (nice touch for blueprint aesthetic) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.22) transparent;
+}
+
+/* Mapbox UI polish */
+.mapboxgl-ctrl-logo {
+  opacity: 0.35;
+  transition: opacity 0.2s ease;
+}
+
+.mapboxgl-map:hover .mapboxgl-ctrl-logo {
+  opacity: 1;
+}
+
+/* Map pin base (blueprint annotation style) */
+.bp-map-pin {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+
+  background: rgba(7, 20, 40, 0.95); /* deep blueprint navy */
+  border: 2px solid rgba(180, 215, 255, 0.9);
+
+  box-shadow:
+    0 0 0 4px rgba(180, 215, 255, 0.18),
+    0 0 16px rgba(120, 190, 255, 0.25);
+
+  cursor: pointer;
+  position: relative;
+
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.bp-map-pin::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 12px;
+  background: rgba(180, 215, 255, 0.85);
+  border-radius: 2px;
+}
+
+/* Map pin hover feedback */
+.bp-map-pin:hover {
+  transform: translateY(-2px);
+  background: rgba(120, 190, 255, 0.85); /* blueprint blue */
+  border-color: rgba(160, 210, 255, 1);
+  box-shadow: 0 0 18px rgba(120, 190, 255, 0.6);
+}
