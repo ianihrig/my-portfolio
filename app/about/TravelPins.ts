@@ -9,8 +9,8 @@ export const travelPins: TravelPin[] = [
       lat: 38.7223,
       lng: -9.1393,
       photos: [
-      { src: "/about/travel/lisbon/lisbon1.png", alt: "Lisbon1" },
-      { src: "/about/travel/lisbon/lisbon2.png", alt: "Lisbon2" },
+      { src: "/about/travel/lisbon/lisbon1.jpeg", alt: "Lisbon1" },
+      { src: "/about/travel/lisbon/lisbon2.jpeg", alt: "Lisbon2" },
     ],
     },
    {
@@ -20,11 +20,11 @@ export const travelPins: TravelPin[] = [
       lat: 41.1579,
       lng: -8.6291,
       photos: [
-        { src: "/about/travel/porto/porto1.png", alt: "Porto1" },
-        { src: "/about/travel/porto/porto2.png", alt: "Porto2" },
-        { src: "/about/travel/porto/porto3.png", alt: "Porto3" },
-        { src: "/about/travel/porto/porto4.png", alt: "Porto4" },
-        { src: "/about/travel/porto/porto5.png", alt: "Porto5" },
+        { src: "/about/travel/porto/porto1.jpeg", alt: "Porto1" },
+        { src: "/about/travel/porto/porto2.jpeg", alt: "Porto2" },
+        { src: "/about/travel/porto/porto3.jpeg", alt: "Porto3" },
+        { src: "/about/travel/porto/porto4.jpeg", alt: "Porto4" },
+        { src: "/about/travel/porto/porto5.jpeg", alt: "Porto5" },
       ],
     },
     {
@@ -34,11 +34,11 @@ export const travelPins: TravelPin[] = [
       lat: 39.6012,
       lng: -9.0707,
       photos: [
-        { src: "/about/travel/nazare/nazare1.png", alt: "Nazare1" },
-        { src: "/about/travel/nazare/nazare2.png", alt: "Nazare2" },
-        { src: "/about/travel/nazare/nazare3.png", alt: "Nazare3" },
-        { src: "/about/travel/nazare/nazare4.png", alt: "Nazare4" },
-        { src: "/about/travel/nazare/nazare5.png", alt: "Nazare5" },
+        { src: "/about/travel/nazare/nazare1.jpeg", alt: "Nazare1" },
+        { src: "/about/travel/nazare/nazare2.jpeg", alt: "Nazare2" },
+        { src: "/about/travel/nazare/nazare3.jpeg", alt: "Nazare3" },
+        { src: "/about/travel/nazare/nazare4.jpeg", alt: "Nazare4" },
+        { src: "/about/travel/nazare/nazare5.jpeg", alt: "Nazare5" },
       ],
     },
 
@@ -50,9 +50,9 @@ export const travelPins: TravelPin[] = [
       lat: 40.4168,
       lng: -3.7038,
       photos: [
-        { src: "/about/travel/madrid/madrid1.png", alt: "Madrid1" },
-        { src: "/about/travel/madrid/madrid2.png", alt: "Madrid2" },
-        { src: "/about/travel/madrid/madrid3.png", alt: "Madrid3" },
+        { src: "/about/travel/madrid/madrid1.jpeg", alt: "Madrid1" },
+        { src: "/about/travel/madrid/madrid2.jpeg", alt: "Madrid2" },
+        { src: "/about/travel/madrid/madrid3.jpeg", alt: "Madrid3" },
       ],
     },
     {
@@ -62,9 +62,9 @@ export const travelPins: TravelPin[] = [
       lat: 41.3851,
       lng: 2.1734,
       photos: [
-        { src: "/about/travel/barcelona/barcelona1.png", alt: "Barcelona1" },
-        { src: "/about/travel/barcelona/barcelona2.png", alt: "Barcelona2" },
-        { src: "/about/travel/barcelona/barcelona3.png", alt: "Barcelona3" },
+        { src: "/about/travel/barcelona/barcelona1.jpeg", alt: "Barcelona1" },
+        { src: "/about/travel/barcelona/barcelona2.jpeg", alt: "Barcelona2" },
+        { src: "/about/travel/barcelona/barcelona3.jpeg", alt: "Barcelona3" },
       ],
     },
     // {
@@ -90,10 +90,10 @@ export const travelPins: TravelPin[] = [
       lat: 37.1773,
       lng: -3.5986,
       photos: [
-        { src: "/about/travel/granada/granada1.png", alt: "Granada1" },
-        { src: "/about/travel/granada/granada2.png", alt: "Granada2" },
-        { src: "/about/travel/granada/granada3.png", alt: "Granada3" },
-        { src: "/about/travel/granada/granada4.png", alt: "Granada4" },
+        { src: "/about/travel/granada/granada1.jpeg", alt: "Granada1" },
+        { src: "/about/travel/granada/granada2.jpeg", alt: "Granada2" },
+        { src: "/about/travel/granada/granada3.jpeg", alt: "Granada3" },
+        { src: "/about/travel/granada/granada4.jpeg", alt: "Granada4" },
       ],
     },
     // {
@@ -123,11 +123,11 @@ export const travelPins: TravelPin[] = [
       lat: 48.8566,
       lng: 2.3522,
       photos: [
-        { src: "/about/travel/paris/paris1.png", alt: "Paris1" },
-        { src: "/about/travel/paris/paris2.png", alt: "Paris2" },
-        { src: "/about/travel/paris/paris3.png", alt: "Paris3" },
-        { src: "/about/travel/paris/paris4.png", alt: "Paris4" },
-        { src: "/about/travel/paris/paris5.png", alt: "Paris5" },
+        { src: "/about/travel/paris/paris1.jpeg", alt: "Paris1" },
+        { src: "/about/travel/paris/paris2.jpeg", alt: "Paris2" },
+        { src: "/about/travel/paris/paris3.jpeg", alt: "Paris3" },
+        { src: "/about/travel/paris/paris4.jpeg", alt: "Paris4" },
+        { src: "/about/travel/paris/paris5.jpeg", alt: "Paris5" },
       ],
     },
     // {
@@ -163,10 +163,10 @@ export const travelPins: TravelPin[] = [
       lat: 51.2093,
       lng: 3.2247,
       photos: [
-        { src: "/about/travel/bruges/bruges1.png", alt: "Bruges1" },
-        { src: "/about/travel/bruges/bruges2.png", alt: "Bruges2" },
-        { src: "/about/travel/bruges/bruges3.png", alt: "Bruges3" },
-        { src: "/about/travel/bruges/bruges4.png", alt: "Bruges4" },
+        { src: "/about/travel/bruges/bruges1.jpeg", alt: "Bruges1" },
+        { src: "/about/travel/bruges/bruges2.jpeg", alt: "Bruges2" },
+        { src: "/about/travel/bruges/bruges3.jpeg", alt: "Bruges3" },
+        { src: "/about/travel/bruges/bruges4.jpeg", alt: "Bruges4" },
       ],
     },
 
@@ -186,10 +186,10 @@ export const travelPins: TravelPin[] = [
       lat: 52.7413,
       lng: 6.0796,
       photos: [
-        { src: "/about/travel/giethoorn/giethoorn1.png", alt: "Giethoorn1" },
-        { src: "/about/travel/giethoorn/giethoorn2.png", alt: "Giethoorn2" },
-        { src: "/about/travel/giethoorn/giethoorn3.png", alt: "Giethoorn3" },
-        { src: "/about/travel/giethoorn/giethoorn4.png", alt: "Giethoorn4" },
+        { src: "/about/travel/giethoorn/giethoorn1.jpeg", alt: "Giethoorn1" },
+        { src: "/about/travel/giethoorn/giethoorn2.jpeg", alt: "Giethoorn2" },
+        { src: "/about/travel/giethoorn/giethoorn3.jpeg", alt: "Giethoorn3" },
+        { src: "/about/travel/giethoorn/giethoorn4.jpeg", alt: "Giethoorn4" },
       ],
     },
     // {
@@ -217,8 +217,8 @@ export const travelPins: TravelPin[] = [
       lat: 49.4521,
       lng: 11.0767,
       photos: [
-        { src: "/about/travel/nuremberg/nuremberg1.png", alt: "Nuremberg1" },
-        { src: "/about/travel/nuremberg/nuremberg2.png", alt: "Nuremberg2" },
+        { src: "/about/travel/nuremberg/nuremberg1.jpeg", alt: "Nuremberg1" },
+        { src: "/about/travel/nuremberg/nuremberg2.jpeg", alt: "Nuremberg2" },
       ],
     },
     // {
@@ -332,12 +332,12 @@ export const travelPins: TravelPin[] = [
       lat: 37.6,
       lng: 26.15,
       photos: [
-        { src: "/about/travel/ikaria/ikaria1.png", alt: "Ikaria1" },
-        { src: "/about/travel/ikaria/ikaria2.png", alt: "Ikaria2" },
-        { src: "/about/travel/ikaria/ikaria3.png", alt: "Ikaria3" },
-        { src: "/about/travel/ikaria/ikaria4.png", alt: "Ikaria4" },
-        { src: "/about/travel/ikaria/ikaria5.png", alt: "Ikaria5" },
-        { src: "/about/travel/ikaria/ikaria6.png", alt: "Ikaria6" },
+        { src: "/about/travel/ikaria/ikaria1.jpeg", alt: "Ikaria1" },
+        { src: "/about/travel/ikaria/ikaria2.jpeg", alt: "Ikaria2" },
+        { src: "/about/travel/ikaria/ikaria3.jpeg", alt: "Ikaria3" },
+        { src: "/about/travel/ikaria/ikaria4.jpeg", alt: "Ikaria4" },
+        { src: "/about/travel/ikaria/ikaria5.jpeg", alt: "Ikaria5" },
+        { src: "/about/travel/ikaria/ikaria6.jpeg", alt: "Ikaria6" },
       ],
     },
 
@@ -387,9 +387,9 @@ export const travelPins: TravelPin[] = [
       lat: 21.0278,
       lng: 105.8342,
       photos: [
-        { src: "/about/travel/hanoi/hanoi1.png", alt: "Hanoi1" },
-        { src: "/about/travel/hanoi/hanoi2.png", alt: "Hanoi2" },
-        { src: "/about/travel/hanoi/hanoi3.png", alt: "Hanoi3" },
+        { src: "/about/travel/hanoi/hanoi1.jpeg", alt: "Hanoi1" },
+        { src: "/about/travel/hanoi/hanoi2.jpeg", alt: "Hanoi2" },
+        { src: "/about/travel/hanoi/hanoi3.jpeg", alt: "Hanoi3" },
       ],
     },
     {
@@ -399,9 +399,9 @@ export const travelPins: TravelPin[] = [
       lat: 20.9101,
       lng: 107.1839,
       photos: [
-        { src: "/about/travel/ha-long-bay/ha-long-bay1.png", alt: "Ha Long Bay1" },
-        { src: "/about/travel/ha-long-bay/ha-long-bay2.png", alt: "Ha Long Bay2" },
-        { src: "/about/travel/ha-long-bay/ha-long-bay3.png", alt: "Ha Long Bay3" },
+        { src: "/about/travel/ha-long-bay/ha-long-bay1.jpeg", alt: "Ha Long Bay1" },
+        { src: "/about/travel/ha-long-bay/ha-long-bay2.jpeg", alt: "Ha Long Bay2" },
+        { src: "/about/travel/ha-long-bay/ha-long-bay3.jpeg", alt: "Ha Long Bay3" },
       ],
     },
 
@@ -413,15 +413,15 @@ export const travelPins: TravelPin[] = [
       lat: 6.9271,
       lng: 79.8612,
       photos: [
-        { src: "/about/travel/colombo/colombo1.png", alt: "Colombo1" },
-        { src: "/about/travel/colombo/colombo2.png", alt: "Colombo2" },
-        { src: "/about/travel/colombo/colombo3.png", alt: "Colombo3" },
-        { src: "/about/travel/colombo/colombo4.png", alt: "Colombo4" },
-        { src: "/about/travel/colombo/colombo5.png", alt: "Colombo5" },
-        { src: "/about/travel/colombo/colombo6.png", alt: "Colombo6" },
-        { src: "/about/travel/colombo/colombo7.png", alt: "Colombo7" },
-        { src: "/about/travel/colombo/colombo8.png", alt: "Colombo8" },
-        { src: "/about/travel/colombo/colombo9.png", alt: "Colombo9" },
+        { src: "/about/travel/colombo/colombo1.jpeg", alt: "Colombo1" },
+        { src: "/about/travel/colombo/colombo2.jpeg", alt: "Colombo2" },
+        { src: "/about/travel/colombo/colombo3.jpeg", alt: "Colombo3" },
+        { src: "/about/travel/colombo/colombo4.jpeg", alt: "Colombo4" },
+        { src: "/about/travel/colombo/colombo5.jpeg", alt: "Colombo5" },
+        { src: "/about/travel/colombo/colombo6.jpeg", alt: "Colombo6" },
+        { src: "/about/travel/colombo/colombo7.jpeg", alt: "Colombo7" },
+        { src: "/about/travel/colombo/colombo8.jpeg", alt: "Colombo8" },
+        { src: "/about/travel/colombo/colombo9.jpeg", alt: "Colombo9" },
       ],
     },
 
@@ -453,9 +453,9 @@ export const travelPins: TravelPin[] = [
       lat: 20.2114,
       lng: -87.4654,
       photos: [
-        { src: "/about/travel/tulum/tulum1.png", alt: "Tulum1" },
-        { src: "/about/travel/tulum/tulum2.png", alt: "Tulum2" },
-        { src: "/about/travel/tulum/tulum3.png", alt: "Tulum3" },
+        { src: "/about/travel/tulum/tulum1.jpeg", alt: "Tulum1" },
+        { src: "/about/travel/tulum/tulum2.jpeg", alt: "Tulum2" },
+        { src: "/about/travel/tulum/tulum3.jpeg", alt: "Tulum3" },
       ],
     },
 
@@ -467,8 +467,8 @@ export const travelPins: TravelPin[] = [
     lng: -84.388,
     note: "Home base.",
     photos: [
-      { src: "/about/travel/atlanta/atlanta1.png", alt: "Atlanta1" },
-      { src: "/about/travel/atlanta/atlanta2.png", alt: "Atlanta2" },
+      { src: "/about/travel/atlanta/atlanta1.jpeg", alt: "Atlanta1" },
+      { src: "/about/travel/atlanta/atlanta2.jpeg", alt: "Atlanta2" },
     ],
   },
 ];
