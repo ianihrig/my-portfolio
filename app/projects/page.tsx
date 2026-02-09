@@ -37,9 +37,9 @@ export default function ProjectsPage() {
         subtitle: "Electromechanical automation for scalable assembly",
         year: "2025",
         tags: ["Mechanisms", "Mechatronics", "Prototyping"],
-        imageSrc: "/projects/toothpick/main.jpg",
+        imageSrc: "/projects/toothpick/toothpick.jpg",
         media: [
-          { type: "image", src: "/projects/toothpick/main.jpg", alt: "Automated toothpick flag assembly machine – full system view" },
+          { type: "image", src: "/projects/toothpick/toothpick.jpg", alt: "Automated toothpick flag assembly machine – full system view" },
           { type: "pdf", src: "/projects/toothpick/poster.pdf", label: "Expo Poster", thumb: "/projects/toothpick/poster.jpg" },
         ],
         size: "1x1",
