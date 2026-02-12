@@ -134,36 +134,6 @@ function PhotoModal({
                     />
                   </div>
                 </div>
-
-                {/* Thumbnails — centered under image */}
-                {photos.length > 1 ? (
-                  <div className="mt-5 flex gap-3 overflow-x-auto pb-2">
-                    {photos.map((p, i) => (
-                      <button
-                        key={p.src + i}
-                        type="button"
-                        onClick={() => setIdx(i)}
-                        className={[
-                          "group shrink-0 rounded-xl overflow-hidden",
-                          "border border-white/10 bg-white/5",
-                          "transition hover:-translate-y-0.5 hover:border-white/25 hover:shadow-lg",
-                          i === idx ? "ring-1 ring-white/30 border-white/40" : "",
-                        ].join(" ")}
-                        aria-label={`Open photo ${i + 1}`}
-                      >
-                        <div className="h-16 w-24 grid place-items-center bg-[#061225]/40">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
-                            src={p.src}
-                            alt={p.alt ?? ""}
-                            className="max-h-full max-w-full object-contain"
-                            draggable={false}
-                          />
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                ) : null}
               </div>
               {photos.length > 1 ? (
                 <div className="mt-4 flex gap-3 overflow-x-auto pb-1">
