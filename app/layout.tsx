@@ -27,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Link> */}
 
         <PanelShell>{children}</PanelShell>
+        <Analytics />
       </body>
     </html>
   );
