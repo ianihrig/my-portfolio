@@ -89,7 +89,8 @@ function PhotoModal({
               <h3 className="text-xl font-semibold tracking-tight truncate">{title}</h3>
               {note ? <p className="mt-1 text-white/65 text-sm">{note}</p> : null}
               <div className="mt-2 text-xs text-white/45">
-                {idx + 1} / {photos.length} • Tip: ← / → to navigate, Esc to close
+                {idx + 1} / {photos.length}
+                <span className="hidden md:inline"> • Tip: ← / → to navigate, Esc to close</span>
               </div>
             </div>
 

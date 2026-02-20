@@ -185,9 +185,9 @@ export default function ProjectsPage() {
 
   return (
     <div>
-      <div className="mb-8">
-        <h1 className="text-5xl font-semibold tracking-tight">Projects</h1>
-        <p className="mt-3 bp-muted max-w-2xl">
+      <div className="mb-6 sm:mb-8">
+        <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">Projects</h1>
+        <p className="mt-3 text-sm sm:text-base bp-muted max-w-2xl">
           A selection of work across robotics, mechanisms, optimization, and
           manufacturing. Click a tile to expand.
         </p>
@@ -198,7 +198,7 @@ export default function ProjectsPage() {
         className="
           grid gap-2 sm:gap-3
           grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
-          auto-rows-[160px] sm:auto-rows-[170px] lg:auto-rows-[180px]
+          auto-rows-[150px] sm:auto-rows-[170px] lg:auto-rows-[180px]
           grid-flow-dense
         "
       >

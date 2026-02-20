@@ -161,17 +161,29 @@ export default function AboutPage() {
     { id: "p-1", kind: "placeholder", label: "RESERVED", col: 7, row: 9, w: 6, h: 2 },
   ];
 
+  const MOBILE_STACK_ORDER = ["map", "working", "reading", "listening", "creator-0", "creator-1", "creator-2", "p-1"];
+
+  const mobileSlots = MOBILE_STACK_ORDER.map((id) => MOSAIC_LAYOUT.find((slot) => slot.id === id)).filter(
+    (slot): slot is MosaicSlot => !!slot
+  );
+
+  const mobileSlotClass = (slot: MosaicSlot) => {
+    if (slot.kind === "map") return "h-[360px] sm:h-[420px]";
+    if (slot.kind === "media") return "h-[320px] sm:h-[360px]";
+    return "";
+  };
+
   const renderSlot = (slot: MosaicSlot) => {
     switch (slot.kind) {
       case "map":
         return (
-         <GlassCard className="h-full p-5 flex flex-col">
+         <GlassCard className="h-full p-4 sm:p-5 flex flex-col">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <div className="text-[11px] tracking-[0.25em] uppercase text-white/55">
+              <div className="text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-white/55">
                 Travel map
               </div>
-              <div className="mt-2 text-sm text-white/65">
+              <div className="mt-2 text-xs sm:text-sm text-white/65">
                 Pins for places I’ve been — click a pin to view photos.
               </div>
             </div>
@@ -191,26 +203,22 @@ export default function AboutPage() {
 
       case "working":
         return (
-          <GlassCard className="h-full p-5 flex flex-col">
-            {/* Top content should be allowed to shrink */}
+          <GlassCard className="h-full p-4 sm:p-5 flex flex-col">
             <div className="flex-1 min-h-0">
               <div className="text-[10px] tracking-[0.25em] uppercase text-white/55">
                 WHAT I’M BUILDING
               </div>
 
-              <div className="mt-3 text-sm font-semibold">
+              <div className="mt-3 text-sm sm:text-base font-semibold">
                 {workingNow.title}
               </div>
 
-              <p className="mt-2 text-sm text-white/65 leading-relaxed line-clamp-3">
+              <p className="mt-2 text-xs sm:text-sm text-white/65 leading-relaxed line-clamp-3">
                 {workingNow.description}
               </p>
             </div>
 
-            {/* Footer pinned at bottom */}
-            <div className="mt-auto" />
-
-            <div className="pt-32 text-xs text-white/40 font-mono">
+            <div className="pt-4 text-xs text-white/40 font-mono">
               status: {workingNow.status ?? "active"} • updated: {workingNow.updated ?? "manual"}
             </div>
           </GlassCard>
@@ -229,29 +237,35 @@ export default function AboutPage() {
 
   return (
     <div className="w-full">
-      <h1 className="text-5xl font-semibold tracking-tight">About</h1>
-      <p className="mt-3 text-white/70 max-w-3xl leading-relaxed">{ABOUT}</p>
+      <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">About</h1>
+      <p className="mt-3 text-sm sm:text-base text-white/70 max-w-3xl leading-relaxed">{ABOUT}</p>
 
-      <div className="mt-6 flex flex-wrap gap-2">
+      <div className="mt-5 sm:mt-6 flex flex-wrap gap-1.5 sm:gap-2">
         {interests.map((i) => (
           <Pill key={i}>{i}</Pill>
         ))}
       </div>
 
       {/* MOSAIC BOARD */}
-      <div className="mt-10">
+      <div className="mt-8 sm:mt-10">
+        <div className="bp-glass rounded-2xl border border-white/10 p-3 sm:p-5">
+          <div className="md:hidden space-y-3 sm:space-y-4">
+            {mobileSlots.map((slot, i) => (
+              <RevealCard key={`mobile-${slot.id}`} delay={Math.min(0.3, i * 0.03)}>
+                <div className={mobileSlotClass(slot)}>{renderSlot(slot)}</div>
+              </RevealCard>
+            ))}
+          </div>
 
-        <div className="bp-glass rounded-2xl border border-white/10 p-5">
           <div
-            className="grid grid-cols-12 gap-4"
+            className="hidden md:grid grid-cols-12 gap-4"
             style={{
-              // tune this: 72–96px is a good range
               gridAutoRows: "80px",
             }}
           >
             {MOSAIC_LAYOUT.map((slot, i) => (
               <RevealCard
-                key={slot.id}
+                key={`desktop-${slot.id}`}
                 delay={Math.min(0.3, i * 0.03)}
                 style={{
                   gridColumn: `${slot.col} / span ${slot.w}`,
@@ -283,7 +297,7 @@ function CreatorCard({ creator }: { creator: Creator }) {
     >
       <GlassCard
         className="
-          h-full p-5
+          h-full p-4 sm:p-5
           transition
           hover:border-white/20 hover:bg-white/[0.07]
           hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(0,0,0,0.25)]
@@ -307,7 +321,7 @@ function CreatorCard({ creator }: { creator: Creator }) {
             <img
               src={creator.imageSrc}
               alt={creator.name}
-              className="h-24 w-24 object-cover"
+              className="h-20 w-20 sm:h-24 sm:w-24 object-cover"
               loading="lazy"
             />
           </div>
@@ -321,7 +335,7 @@ function CreatorCard({ creator }: { creator: Creator }) {
 
             <p
               className="
-                mt-2 text-sm text-white/65 leading-relaxed
+                mt-2 text-xs sm:text-sm text-white/65 leading-relaxed
                 line-clamp-3
                 transition
                 group-hover:line-clamp-none group-focus-within:line-clamp-none
@@ -345,7 +359,7 @@ function MediaMiniCard({ card }: { card: MediaCard }) {
   const inner = (
     <GlassCard
       className={[
-        "h-full p-5 flex flex-col overflow-hidden",
+        "h-full p-4 sm:p-5 flex flex-col overflow-hidden",
         clickable
           ? "transition hover:border-white/20 hover:bg-white/[0.07] hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(0,0,0,0.25)]"
           : "",
@@ -377,7 +391,7 @@ function MediaMiniCard({ card }: { card: MediaCard }) {
       <div className="mt-4 shrink-0 min-w-0">
         <div className="font-semibold truncate">{card.title}</div>
         {card.subtitle ? (
-          <div className="text-sm text-white/65 truncate">{card.subtitle}</div>
+          <div className="text-xs sm:text-sm text-white/65 truncate">{card.subtitle}</div>
         ) : null}
       </div>
     </GlassCard>

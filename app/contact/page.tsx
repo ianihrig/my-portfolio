@@ -123,7 +123,7 @@ function IconPill({ item }: { item: IconLink }) {
       rel={isMail ? undefined : isExternal ? "noreferrer" : undefined}
       className="
         group relative inline-flex items-center justify-center
-        h-12 w-12 rounded-2xl
+        h-11 w-11 sm:h-12 sm:w-12 rounded-2xl
         border border-white/15 bg-white/5 backdrop-blur-md
         hover:border-white/25 hover:bg-white/8
         transition
@@ -165,7 +165,7 @@ function TextInput(props: React.InputHTMLAttributes<HTMLInputElement>) {
       className="
         w-full rounded-xl
         border border-white/12 bg-white/5
-        px-4 py-3 text-sm text-white/90
+        px-3 py-2.5 sm:px-4 sm:py-3 text-sm text-white/90
         placeholder:text-white/35
         focus:outline-none focus:ring-2 focus:ring-white/20
       "
@@ -178,9 +178,9 @@ function TextArea(props: React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
     <textarea
       {...props}
       className="
-        w-full min-h-[170px] resize-none rounded-xl
+        w-full min-h-[150px] sm:min-h-[170px] resize-none rounded-xl
         border border-white/12 bg-white/5
-        px-4 py-3 text-sm text-white/90
+        px-3 py-2.5 sm:px-4 sm:py-3 text-sm text-white/90
         placeholder:text-white/35
         focus:outline-none focus:ring-2 focus:ring-white/20
       "
@@ -252,22 +252,22 @@ export default function ContactPage() {
 
   return (
     <div className="w-full">
-      <h1 className="text-5xl font-semibold tracking-tight">Contact</h1>
-      <p className="mt-3 text-white/70 max-w-2xl">
+      <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">Contact</h1>
+      <p className="mt-3 text-sm sm:text-base text-white/70 max-w-2xl">
         Reach out for collaborations, robotics/mech design work, or just to connect.
       </p>
 
-      <div className="mt-10 w-full">
+      <div className="mt-8 sm:mt-10 w-full">
 
         {/* Right card */}
-        <section className="bp-glass rounded-2xl p-7 border border-white/10">
+        <section className="bp-glass rounded-2xl p-5 sm:p-7 border border-white/10">
           {/* Centered icon row (dock-like) */}
-          <div className="flex justify-center gap-3">
+          <div className="flex justify-center gap-2 sm:gap-3">
             {iconLinks.map((it) => (
               <IconPill key={it.label} item={it} />
             ))}
           </div>
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/70">
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-6 gap-y-2 text-xs sm:text-sm text-white/70">
             <a className="hover:underline underline-offset-4" href={`mailto:${YOUR_EMAIL}`}>
               {YOUR_EMAIL}
             </a>
@@ -278,7 +278,7 @@ export default function ContactPage() {
               {YOUR_LOCATION}
             </span>
           </div>
-          <div className="my-6 h-px bg-white/10" />
+          <div className="my-5 sm:my-6 h-px bg-white/10" />
 
           <div className="text-center">
             <h2 className="text-lg font-semibold">Send a message</h2>
@@ -287,7 +287,7 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <form onSubmit={onSubmit} className="mt-6 space-y-4">
+          <form onSubmit={onSubmit} className="mt-5 sm:mt-6 space-y-3 sm:space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <FieldLabel>Name</FieldLabel>
@@ -335,15 +335,16 @@ export default function ContactPage() {
               autoComplete="off"
               className="hidden"
             />
-            <div className="flex items-center justify-between gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
               <button
                 type="submit"
                 disabled={status === "sending"}
                 className="
                   inline-flex items-center gap-2
+                  w-full sm:w-auto justify-center
                   rounded-xl border border-white/15
                   bg-white/10 hover:bg-white/15
-                  px-5 py-3 text-sm font-medium
+                  px-4 py-2.5 sm:px-5 sm:py-3 text-sm font-medium
                   transition
                   focus:outline-none focus:ring-2 focus:ring-white/20
                   disabled:opacity-50 disabled:cursor-not-allowed

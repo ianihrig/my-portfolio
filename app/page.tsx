@@ -20,7 +20,7 @@ type EducationItem = {
 function SectionHeader({ title, right }: { title: string; right?: React.ReactNode }) {
   return (
     <div className="flex items-end justify-between gap-4">
-      <h2 className="text-xl font-semibold tracking-tight">{title}</h2>
+      <h2 className="text-lg sm:text-xl font-semibold tracking-tight">{title}</h2>
       {right}
     </div>
   );
@@ -169,44 +169,44 @@ export default function OverviewPage() {
 
   return (
     <div className="w-full">
-      <h1 className="text-5xl font-semibold tracking-tight">Overview</h1>
+      <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">Overview</h1>
 
       {/* Top block: photo left, identity right */}
-      <div className="mt-8 grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-6">
-        <GlassCard className="p-5">
+      <div className="mt-6 sm:mt-8 grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-4 sm:gap-6">
+        <GlassCard className="p-4 sm:p-5">
           <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={PHOTO_SRC} alt="Portrait" className="h-[360px] w-full object-cover" />
+            <img src={PHOTO_SRC} alt="Portrait" className="h-[300px] sm:h-[360px] w-full object-cover" />
           </div>
-          <p className="mt-4 text-sm text-white/60">
+          <p className="mt-3 sm:mt-4 text-sm text-white/60">
             Atlanta, GA • Open to robotics/mech design roles
           </p>
         </GlassCard>
 
-        <GlassCard className="p-7">
+        <GlassCard className="p-5 sm:p-7">
           <div className="max-w-3xl">
-            <div className="text-[11px] tracking-[0.25em] uppercase text-white/55">
+            <div className="text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-white/55">
               Identity
             </div>
-            <h2 className="mt-2 text-2xl font-semibold leading-tight">
+            <h2 className="mt-2 text-xl sm:text-2xl font-semibold leading-tight">
               {HEADLINE}
             </h2>
-            <p className="mt-3 text-white/70 leading-relaxed">{SUBHEAD}</p>
+            <p className="mt-3 text-sm sm:text-base text-white/70 leading-relaxed">{SUBHEAD}</p>
 
-            <div className="mt-5 flex flex-wrap gap-2">
+            <div className="mt-4 sm:mt-5 flex flex-wrap gap-2">
               {FOCUS.map((f) => (
                 <Pill key={f}>{f}</Pill>
               ))}
             </div>
 
-            <div className="mt-6">
+            <div className="mt-5 sm:mt-6">
               <a
                 href={RESUME_PDF}
                 className="
                   inline-flex items-center justify-center
                   rounded-xl border border-white/15
                   bg-white/10 hover:bg-white/15
-                  px-5 py-3 text-sm font-medium
+                  px-4 py-2.5 sm:px-5 sm:py-3 text-sm font-medium
                   transition
                   focus:outline-none focus:ring-2 focus:ring-white/20
                 "
@@ -219,15 +219,15 @@ export default function OverviewPage() {
       </div>
 
       {/* Resume sections */}
-      <div className="mt-10 space-y-6">
-        <GlassCard className="p-7">
+      <div className="mt-8 sm:mt-10 space-y-4 sm:space-y-6">
+        <GlassCard className="p-5 sm:p-7">
           <SectionHeader title="Experience" />
-          <div className="mt-5 space-y-6">
+          <div className="mt-4 sm:mt-5 space-y-5 sm:space-y-6">
             {experience.map((x) => (
               <div key={`${x.title}-${x.org}`} className="border-b border-white/10 pb-5 last:border-b-0 last:pb-0">
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
                   <div className="min-w-0">
-                    <div className="text-lg font-semibold">{x.title}</div>
+                    <div className="text-base sm:text-lg font-semibold">{x.title}</div>
                     <div className="text-white/70">
                       {x.org}
                       {x.location ? <span className="text-white/45"> • {x.location}</span> : null}
@@ -235,7 +235,7 @@ export default function OverviewPage() {
                   </div>
                   <div className="text-sm text-white/55">{x.dates}</div>
                 </div>
-                <ul className="mt-3 space-y-2 text-white/80">
+                <ul className="mt-3 space-y-2 text-sm text-white/80">
                   {x.bullets.map((b, i) => (
                     <li key={i} className="flex gap-2">
                       <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white/35 shrink-0" />
@@ -248,20 +248,20 @@ export default function OverviewPage() {
           </div>
         </GlassCard>
 
-        <GlassCard className="p-7">
+        <GlassCard className="p-5 sm:p-7">
           <SectionHeader title="Education" />
-          <div className="mt-5 space-y-5">
+          <div className="mt-4 sm:mt-5 space-y-5">
             {education.map((e) => (
               <div key={e.school + e.degree} className="border-b border-white/10 pb-5 last:border-b-0 last:pb-0">
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
                   <div>
-                    <div className="text-lg font-semibold">{e.school}</div>
+                    <div className="text-base sm:text-lg font-semibold">{e.school}</div>
                     <div className="text-white/70">{e.degree}</div>
                   </div>
                   <div className="text-sm text-white/55">{e.dates}</div>
                 </div>
                 {!!e.details?.length && (
-                  <ul className="mt-3 space-y-2 text-white/80">
+                  <ul className="mt-3 space-y-2 text-sm text-white/80">
                     {e.details.map((d, i) => (
                       <li key={i} className="flex gap-2">
                         <span className="mt-2 h-1.5 w-1.5 rounded-full bg-white/35 shrink-0" />

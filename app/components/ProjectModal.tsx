@@ -151,10 +151,11 @@ export default function ProjectModal({
 
               {media.length > 1 ? (
                 <div className="mt-3 text-xs text-white/45">
-                  {idx + 1} / {media.length} • Tip: ← → to navigate, Esc to close
+                  {idx + 1} / {media.length}
+                  <span className="hidden md:inline"> • Tip: ← → to navigate, Esc to close</span>
                 </div>
               ) : (
-                <div className="mt-3 text-xs text-white/45">
+                <div className="mt-3 text-xs text-white/45 hidden md:block">
                   Tip: press <span className="font-mono text-white/70">Esc</span> to close
                 </div>
               )}

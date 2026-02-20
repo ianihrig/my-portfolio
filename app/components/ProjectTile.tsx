@@ -101,13 +101,13 @@ export default function ProjectTile({
       <div
         className="
           absolute inset-0 flex items-center justify-center
-          px-6 text-center
+          px-4 sm:px-6 text-center
           opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100
           transition duration-300
         "
       >
         <div className="max-w-[26ch]">
-          <div className="text-lg font-semibold tracking-tight text-white">
+          <div className="text-base sm:text-lg font-semibold tracking-tight text-white">
             {project.title}
           </div>
         </div>
